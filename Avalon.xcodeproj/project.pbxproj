@@ -103,18 +103,8 @@
 			children = (
 				307AA3EA2C2C83630057C5F3 /* Navigation */,
 				307AA3DE2C2C7D890057C5F3 /* App */,
-				307AA3DD2C2C7D710057C5F3 /* RootNavigation */,
 			);
 			path = Host;
-			sourceTree = "<group>";
-		};
-		307AA3DD2C2C7D710057C5F3 /* RootNavigation */ = {
-			isa = PBXGroup;
-			children = (
-				307AA3E02C2C7DCB0057C5F3 /* ContentView */,
-				307AA3DF2C2C7DC40057C5F3 /* RootTab */,
-			);
-			path = RootNavigation;
 			sourceTree = "<group>";
 		};
 		307AA3DE2C2C7D890057C5F3 /* App */ = {
@@ -123,20 +113,6 @@
 				307AA3C92C2C7D070057C5F3 /* AvalonApp.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		307AA3DF2C2C7DC40057C5F3 /* RootTab */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RootTab;
-			sourceTree = "<group>";
-		};
-		307AA3E02C2C7DCB0057C5F3 /* ContentView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ContentView;
 			sourceTree = "<group>";
 		};
 		307AA3E72C2C831C0057C5F3 /* Frameworks */ = {

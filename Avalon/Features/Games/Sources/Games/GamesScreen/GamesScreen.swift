@@ -5,7 +5,10 @@ public struct GamesScreen: View {
     public init() {}
 
     public var body: some View {
-        Text("Games Screen")
+        VStack(spacing: 0) {
+            GamesListView(weeksListModel: .gamesMock)
+        }
+        .navigationTitle("Games")
     }
 }
 

@@ -1,0 +1,21 @@
+# OSX
+.DS_Store
+
+# Xcode
+/.build
+/Packages
+xcuserdata/
+DerivedData/
+.swiftpm/config/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+
+# Swiftling
+swiftlint.result.json
+
+## Fastlane ##
+fastlane/report.xml
+fastlane/test_output/
+fastlane/README.md
+
+## Constants Generation
+Host/Shared/Constants/ThirdPartyKeys.swift

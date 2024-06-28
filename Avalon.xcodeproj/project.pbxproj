@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30651E362C2F2C3C00894E08 /* CommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 30651E352C2F2C3C00894E08 /* CommonUI */; };
 		307AA3CA2C2C7D070057C5F3 /* AvalonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307AA3C92C2C7D070057C5F3 /* AvalonApp.swift */; };
 		307AA3D02C2C7D080057C5F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 307AA3CF2C2C7D080057C5F3 /* Assets.xcassets */; };
 		307AA3D42C2C7D080057C5F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 307AA3D32C2C7D080057C5F3 /* Preview Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30651E342C2F2C1C00894E08 /* CommonUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CommonUI; sourceTree = "<group>"; };
 		307AA3C62C2C7D070057C5F3 /* Avalon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avalon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		307AA3C92C2C7D070057C5F3 /* AvalonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvalonApp.swift; sourceTree = "<group>"; };
 		307AA3CF2C2C7D080057C5F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				307AA3E92C2C831C0057C5F3 /* Games in Frameworks */,
+				30651E362C2F2C3C00894E08 /* CommonUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +97,7 @@
 		307AA3DB2C2C7D190057C5F3 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				30651E342C2F2C1C00894E08 /* CommonUI */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -184,6 +188,7 @@
 			name = Avalon;
 			packageProductDependencies = (
 				307AA3E82C2C831C0057C5F3 /* Games */,
+				30651E352C2F2C3C00894E08 /* CommonUI */,
 			);
 			productName = Avalon;
 			productReference = 307AA3C62C2C7D070057C5F3 /* Avalon.app */;
@@ -486,6 +491,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		30651E352C2F2C3C00894E08 /* CommonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CommonUI;
+		};
 		307AA3E82C2C831C0057C5F3 /* Games */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Games;

@@ -3,38 +3,23 @@
 
 import PackageDescription
 
-private extension Target.Dependency {
-    static let commonUI: Self = .product(name: "CommonUI", package: "CommonUI")
-}
-
 let package = Package(
-    name: "Games",
+    name: "CommonUI",
     defaultLocalization: "en",
     platforms: [.iOS(.v16)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "Games",
-            targets: ["Games"])
-    ],
-    dependencies: [
-        .package(name: "CommonUI", path: "../../Foundation/CommonUI")
+            name: "CommonUI",
+            targets: ["CommonUI"])
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "Games",
-            dependencies: [
-                .commonUI
-            ]
-        ),
+            name: "CommonUI"),
         .testTarget(
-            name: "GamesTests",
-            dependencies: [
-                "Games",
-                .commonUI
-            ]
-        )
+            name: "CommonUITests",
+            dependencies: ["CommonUI"])
     ]
 )

@@ -2,20 +2,28 @@ import SwiftUI
 import MapKit
 
 struct GameDetailsLocationView: View {
-    @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(
-            latitude: 28.502634, longitude: -81.641646),
-        span: MKCoordinateSpan(latitudeDelta: 0.100, longitudeDelta: 0.100))
+    var gameDetailsLocationModel: GameDetailsLocationModel
+    @State private var region: MKCoordinateRegion
+    init(gameDetailsLocationModel: GameDetailsLocationModel) {
+            self.gameDetailsLocationModel = gameDetailsLocationModel
+            _region = State(initialValue: gameDetailsLocationModel.region)
+        }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 18) {
             Text("Location")
                 .font(.headline)
             Divider()
-            Map(coordinateRegion: $region)
-                .frame(width: .infinity, height: 100)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
-            Text("3850 Avalon Rd, Winter Garden, FL 34787")
+            Map(
+                coordinateRegion: $region,
+                interactionModes: [],
+                annotationItems: [gameDetailsLocationModel]) { location in
+                MapMarker(coordinate: location.coordinate, tint: .red)
+            }
+            .frame(width: .infinity, height: 100)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+
+            Text(gameDetailsLocationModel.address)
             Text("View in map >")
                 .foregroundStyle(.blue)
             Divider()
@@ -26,6 +34,6 @@ struct GameDetailsLocationView: View {
 
 #if DEBUG
 #Preview {
-    GameDetailsLocationView()
+    GameDetailsLocationView(gameDetailsLocationModel: .GameDetailsLocationMock)
 }
 #endif

@@ -1,19 +1,28 @@
 import SwiftUI
 
 struct GameDetailsHeaderView: View {
+    var gameDetailsHeaderModel: GameDetailsHeaderModel
+
     var body: some View {
         VStack(spacing: 16) {
             Text("Game details")
+            Spacer()
             VStack(spacing: 16) {
                 ZStack {
                     Capsule()
-                        .fill(.green)
-                        .frame(width: 200, height: 50)
-                    Text("Confirmed")
+                        .fill(gameDetailsHeaderModel.statusColor)
+                        .frame(width: 150, height: 40)
+                    Text(gameDetailsHeaderModel.statusText)
                 }
-                Text("Thurs, 07/11/2024")
-                    .font(.headline)
-                Text("9:00 PM")
+                HStack(spacing: 8) {
+                    Image(systemName: "calendar")
+                    Text(gameDetailsHeaderModel.gameDate)
+                        .font(.headline)
+                }
+                HStack(spacing: 8) {
+                    Image(systemName: "clock")
+                    Text(gameDetailsHeaderModel.gameTime)
+                }
             }
             .padding()
         }
@@ -23,6 +32,6 @@ struct GameDetailsHeaderView: View {
 
 #if DEBUG
 #Preview {
-    GameDetailsHeaderView()
+    GameDetailsHeaderView(gameDetailsHeaderModel: .gameDetailsHeaderMock)
 }
 #endif
